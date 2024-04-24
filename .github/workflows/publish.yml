@@ -27,7 +27,7 @@ jobs:
         context: .
         file: ./Dockerfile.dev
         push: true
-        tags: yourusername/yourimage:latest
+        tags: cheekyff/geminiproject:latest
 
     - name: Run tests
-      run: docker run --rm yourusername/yourimage:latest some-command
+      run: docker run --rm cheekyff/geminiproject:latest
