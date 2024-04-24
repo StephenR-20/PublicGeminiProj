@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
@@ -29,5 +30,15 @@ jobs:
         push: true
         tags: cheekyff/geminiproject:latest
 
-    - name: Run tests
-      run: docker run --rm cheekyff/geminiproject:latest
+    - name: Run server
+      run: |
+        docker run -d --name geminiapp -p 4000:4000 -p 3000:3000 cheekyff/geminiproject:latest
+        sleep 15  # Wait for the server to start
+
+    - name: Verify the server is running
+      run: |
+        curl -f http://localhost:3000
+    
+    - name: Stop the server
+      if: always()
+      run: docker stop geminiapp
