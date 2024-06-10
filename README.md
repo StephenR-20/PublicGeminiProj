@@ -1,5 +1,5 @@
-# DevVersionGeminiProject
-This is the private development repository for our final project (Ballmer's Peak) including all sensitive files needed to run.
+# PublicVersionGeminiProject
+This is the public development repository for our final project (Ballmer's Peak) excluding all sensitive files needed to run.
 
 **LINK TO OUR REPO:**  https://github.com/StephenR-20/DevVersionGeminiProject.git
 Cloud Computing Final Project - Team Ballmer’s Peak 
@@ -47,4 +47,4 @@ The Cloud Services we levereged:
 - Dockerized our app
 - Implemented CI/CD with github actions (creates a new Docker build automatically upon push or pull)
 
-**WE WILL DEMO LIVE ON WEDNESDAY INSTEAD OF DOING A VIDEO DEMO**
+
